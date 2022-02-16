@@ -1,0 +1,8 @@
+out.txt : main.exe              # out.txt depends on main.exe
+	mono main.exe > out.txt # run main.exe, send output to out.txt
+
+main.exe : main.cs             # main.exe depends on main.cs
+	mcs main.cs             # compile main.cs into main.exe
+
+clean:                           # a phoney target, no dependencies
+	rm -f out.txt main.exe  # remove secondary files

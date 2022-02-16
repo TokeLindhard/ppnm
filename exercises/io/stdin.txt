@@ -1,0 +1,7 @@
+class main{
+	static public int Main(){
+	System.Console.WriteLine("this goes to stdout");
+	System.Console.Out.WriteLine("this goes to stderr");
+	return 0;
+	}
+}
