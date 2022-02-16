@@ -1,0 +1,19 @@
+my max int = 2147483647
+my min int = -2147483648
+
+epsilon for double: 2.22044604925031E-16
+and should be 2.22044604925031E-16
+epsilon for float: 1.192093E-07
+and should be 1.19209289550781E-07
+
+sumA-1 = 0.000000e+000 should be 1.110223e-010
+sumB-1 = 1.110223e-010 should be 1.110223e-010
+Assuming what happens is that when adding a tiny number to 1, it will neglect that difference, and thus it will keep on being 1, whereas addding small numbers together will eventually give one, which we then add one to, giving roughly 2.
+
+Abs(a-b): 9.99999971718069E-10
+Abs(a-b)/(Abs(a)+Abs(b))): 4.99999986109034E-10
+approx(1,1+1e-9) = True hopefully True
+Abs(a-b): 1
+Abs(a-b)/(Abs(a)+Abs(b))): 0.333333333333333
+approx(1,2) = False hopefully False
+
