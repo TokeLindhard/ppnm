@@ -1,0 +1,12 @@
+hello
+fun()=7 should be equal 7
+square(2)=4 should be equal to 4
+f3(1,2,3)=9 should be equal to 9
+f4(1,2,3)=4 should be equal to 4
+a=1 should be equal to 1
+a=2 should be equal to 2
+a=3 should be equal to 3
+fb()=1 should be 1
+fb()=2 should be 2
+fb()=3 should be 3
+fc()=1 should be 1 or 3
