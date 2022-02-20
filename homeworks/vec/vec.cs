@@ -37,7 +37,7 @@ public class vec{
     }
 
     public static vec operator-(vec u){
-        return new vec(-1*u);
+        return new vec(-1*u.x,-1*u.y,-1*u.z);
     }
 //dot product between two vectors
     public static double dot(vec v, vec u){

@@ -3,3 +3,7 @@ v = 0 0 0
 5u = 5 10 15
 u+a = 5 7 9
 u-a = -3 -3 -3
+dot product of u and a = 32
+cross product of u*a = -3 6 -3
+norm of vector u = 3.74165738677394
+Overriding Tostring on u: 1 2 3

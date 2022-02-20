@@ -13,14 +13,14 @@ class main{
         vec a = new vec(4,5,6);
 
         (5*u).print("5u = ");
-        (u*5).print("u5 = ");
+        //(u*5).print("u5 = ");
         (u+a).print("u+a = ");
         (u-a).print("u-a = ");
-        double d = dot(u,a);
+        double d = vec.dot(u,a);
         WriteLine($"dot product of u and a = {d}");
-        (Cross(u,v)).print("cross product of u*v = ");
-        double n = norm(u);
+        (vec.cross(u,a)).print("cross product of u*a = ");
+        double n = vec.norm(u);
         WriteLine($"norm of vector u = {n}");
-        WriteLine($"Overriding Tostring on u: u.ToString()");
+        WriteLine($"Overriding Tostring on u: {u}"); //alternatively write u.ToString()
     }
 }
