@@ -33,7 +33,7 @@ lngamma.pyxplot.png: lngamma.data.txt Makefile
 	set ylabel '$$ y $$' \n\
 	set title 'lngamma function' \n\
 	set key left top \n\
-	plot [0:10] [0:10] '$<' index 0 using 1:3 with lines title 'lngamma function',\ \n\
+	plot [0:10] [-1:10] '$<' index 0 using 1:3 with lines title 'lngamma function',\ \n\
 	'lngamma.tab.txt' with points pointtype 3 title 'tab' \n\
 	" | tee log.gpi | pyxplot
 

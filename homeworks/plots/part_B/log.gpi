@@ -4,6 +4,6 @@ set xlabel '$ x $'
 set ylabel '$ y $' 
 set title 'lngamma function' 
 set key left top 
-plot [0:10] [0:10] 'lngamma.data.txt' index 0 using 1:3 with lines title 'lngamma function',\ 
+plot [0:10] [-1:10] 'lngamma.data.txt' index 0 using 1:3 with lines title 'lngamma function',\ 
 'lngamma.tab.txt' with points pointtype 3 title 'tab' 
 
