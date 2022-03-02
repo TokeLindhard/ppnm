@@ -13,7 +13,7 @@ all:Out.txt
 
 Out.txt: main.exe Makefile
 	cat /dev/null > $@
-	/bin/time -p -o $@ --append $(RUN) main.exe >> $@
+	/bin/time -portability -output $@ --append $(RUN) main.exe >> $@
 
 main.exe: main.cs
 	$(CSC) -target:exe -out:$@ $<
