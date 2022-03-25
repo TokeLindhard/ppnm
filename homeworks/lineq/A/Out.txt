@@ -1,0 +1,63 @@
+The matrix A looks like:
+
+         5          9          8 
+         1          6          9 
+         8          7          2 
+         9          4          2 
+         1          1          5 
+Q is
+
+     0.381      0.609     -0.119 
+    0.0762      0.653       0.34 
+      0.61     0.0383     -0.437 
+     0.686     -0.447      0.332 
+    0.0762     0.0206      0.755 
+R is
+
+      13.1         11       6.71 
+         0        7.9         10 
+         0          0       5.67 
+Testing if R is upper triangular
+True
+True
+True
+transposing Q yields
+
+     0.381     0.0762       0.61      0.686     0.0762 
+     0.609      0.653     0.0383     -0.447     0.0206 
+    -0.119       0.34     -0.437      0.332      0.755 
+Q^T*Q =
+
+         1  -1.05e-16   3.47e-16 
+ -1.05e-16          1   -4.6e-16 
+  3.47e-16   -4.6e-16          1 
+Testing if QTQ=1
+True
+True
+True
+Q*R =
+
+         5          9          8 
+         1          6          9 
+         8          7          2 
+         9          4          2 
+         1          1          5 
+Testing if QR=A
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+True
+random vector b:
+     0.389       0.21      0.114 
+Test

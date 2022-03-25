@@ -4,7 +4,7 @@ using static System.Math;
 using System.Diagnostics;
 
 public static class interpol{
-	static double linterp(int n, double[]x, double[]y, double z){
+	static double linterp(double[]x, double[]y, double z){
         Debug.Assert(n>1 && z>=x[0] && z<=x[n-1]); //makes sure our n and z aren't running rampant
         double dy=y[i+1]-y[i], dx=x[i+1]-x[i]; Debug.Assert(dx>0); //makes sure stepsize is actually positive
         return y[i]+dy/dx*(z-x[i]);
