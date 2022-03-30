@@ -5,9 +5,10 @@ using static System.Console;
 class main{
     public static void Main(){
        qrdecomp(); 
+       solution();
     }
-    public static async void qrdecomp(){
-    int n = 5; int m=3;
+    public static void qrdecomp(){
+    int n = 4; int m=3;
         matrix A = new matrix(n,m); //created empty matrix
         Random rnd = new Random(); //Next few lines creates random numbers and fill them into A, x is random variable
         for (int i=0; i<n; i++){
@@ -55,21 +56,42 @@ class main{
                 // else WriteLine($"QR[{i}][{j}] = A[{i}][{j}]");
             }
         }
+    }
+    public static void solution(){
+    //Now testing and finding solutions with a square matrix instead.
 
-
-        var b=new vector(m);
-        for(int i=0;i<b.size;i++){
-            b[i]=rnd.NextDouble();
+        int nn = 4;
+        matrix B = new matrix(nn,nn); //created empty square matrix
+        Random rand = new Random(); //Next few lines creates random numbers and fill them into A, x is random variable
+        for (int i=0; i<nn; i++){                
+            for(int j=0; j<nn; j++){
+                B[i,j] = rand.Next(10);
+            }
         }
+        WriteLine($"The matrix B looks like:");
+        B.print();
+        var qra = new qrgs(B);
+
+        var b=new vector(nn); //creating vector as solutions to the equation Bx=b
+        for(int i=0;i<b.size;i++){
+            b[i]=rand.NextDouble();
+        }            
         b.print("random vector b:\n");
-        WriteLine("Test");
         var x=qra.solve(b);
         WriteLine("the solution x is:");
         x.print();
+        //var C = qra.Q*qra.R; //The matrix B written with Q*R - still doesn't work! :((((
+        vector Bx = B*x; //replace B with C if you want qra.Q*qra.R
+        WriteLine("and B*x is");
+        Bx.print();
+        WriteLine("Checking if this is approx equal to b");
+        //for(int i=0; i<Bx.size; i++){
+        WriteLine($"{(Bx).approx(b)}");
+        //}
 
-        var Ax=A*x;
-        Ax.print("check: A*x (should be equal b):\n");
-        if(vector.approx(Ax,b)) WriteLine("test passed");
-        else WriteLine("test failed");
+        //     var Bx=B*x;
+        //     Bx.print("check: B*x (should be equal b):\n");
+        //     if(vector.approx(Bx,b)) WriteLine("test passed");
+        //     else WriteLine("test failed");
     }
 }
