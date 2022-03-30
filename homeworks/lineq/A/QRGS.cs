@@ -30,8 +30,8 @@ public class qrgs{
 			double sum=0;
 			for(int k = i+1; k<c.size; k++){
 				sum+=U[i,k]*y[k];
-				y[i]=(c[i]-sum)/U[i,i];
 			}
+			y[i]=(c[i]-sum)/U[i,i];
 		}
 		return y;
 	}

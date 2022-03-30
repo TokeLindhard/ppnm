@@ -30,20 +30,18 @@ public class qrgs{
 			double sum=0;
 			for(int k = i+1; k<c.size; k++){
 				sum+=U[i,k]*y[k];
-				y[i]=(c[i]-sum)/U[i,i];
 			}
+			y[i]=(c[i]-sum)/U[i,i];
 		}
 		return y;
 	}
 	public matrix inverse(){
-		int m=QR.size2;
-		var B=new matrix(m,m);
-		var e=new vector(m);
-		for(int i=0;i<m;i++){
-			e[i]=1;
-			B[i]=solve(e);
-			e[i]=0;
+		int n = R.size1;
+		matrix invA = new matrix(n,n);
+		for(int i=0; i<n; i++){
+			vector ei = matrix.id(n)[i];
+			invA[i] = solve(ei);
 		}
-		return B;
+		return invA;
 	}//inverse
 }
