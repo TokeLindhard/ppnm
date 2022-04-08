@@ -1,0 +1,9 @@
+set terminal png 
+set output 'half_life.pyxplot.png' 
+set xlabel '$ t (days) $' 
+set ylabel '$ Activity $' 
+set title 'Activity of ThX' 
+set key right top 
+plot [-0.1:20] [0:150] 'Out.txt' index 0 using 1:2 with lines title 'Activity fit',\ 
+'tabdata.txt' using 1:2:3 with pointtype 7 yerrorbars title '1902 data' 
+
