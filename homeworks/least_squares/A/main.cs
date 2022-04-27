@@ -35,7 +35,7 @@ class main{
         WriteLine(); //if you make two blank lines like this, pyxplot will ignore what comes next if you write the correct index
         WriteLine(); //So write index 0 for the first block, index 1 for the 2nd block and so on.
         
-        WriteLine($"The half life is {-1/coeff[1]} days");
+        WriteLine($"The half life is {-Log(2)/coeff[1]} days");
         WriteLine("Compared with a modern value of 3.6 days.");
     }
 }

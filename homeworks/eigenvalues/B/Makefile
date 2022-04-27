@@ -15,13 +15,10 @@ all: Out.txt
 Out.txt: main.exe
 	mono $< > $@
 
-main.exe: main.cs lsfit.dll matrix.dll
-	$(CSC) -target:exe -reference:lsfit.dll -reference:matrix.dll -reference:QRGS.dll $<
+main.exe: main.cs matrix.dll Jacobi.dll
+	$(CSC) -target:exe -reference:matrix.dll -reference:Jacobi.dll $<
 
-lsfit.dll: lsfit.cs matrix.dll QRGS.dll
-	$(CSC) -target:library -reference:matrix.dll -reference:QRGS.dll $<
-
-QRGS.dll: QRGS.cs matrix.dll
+Jacobi.dll: Jacobi.cs matrix.dll
 	mcs -target:library -reference:matrix.dll $<
 
 LIBDIR = ../../../matlib
@@ -32,4 +29,4 @@ matrix.dll: \
 	$(CSC) -target:library -out:./$@ $^
 	
 clean:
-	$(RM) *.dll *.exe *.txt log*
+	$(RM) *.dll *.exe *.txt

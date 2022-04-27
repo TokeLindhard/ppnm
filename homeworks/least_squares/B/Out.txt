@@ -1,13 +1,13 @@
+coeff prints out
+      4.95     -0.171 
 
-       0.2        0.2 
-       0.2        0.4 
-       0.2        0.6 
-       0.2        0.8 
-       0.2        1.2 
-       0.2        1.8 
-         1         10 
-         1         13 
-         1         15 
+Covariance matrix:
 
-      3.24         39 
-        39        500 
+   0.00101  -0.000106 
+ -0.000106    1.8e-05 
+
+errors
+    0.0318    0.00425 
+The half life is 4.04828189712487 ± 0.100412737658525
+Compared with a modern value of 3.6 days.
+So it is not enough to come within the modern value.

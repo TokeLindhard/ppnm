@@ -36,9 +36,9 @@ public class qrgs{
 		return y;
 	}
 	public matrix inverse(){
-		int m=QR.size2;
-		var B=new matrix(m,m);
-		var e=new vector(m);
+		int m = R.size1;
+		matrix B = new matrix(m,m);
+		vector e = new vector(m);
 		for(int i=0;i<m;i++){
 			e[i]=1;
 			B[i]=solve(e);
