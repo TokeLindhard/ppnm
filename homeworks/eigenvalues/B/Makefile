@@ -9,8 +9,25 @@ RUN=$(DOTNET) exec --runtimeconfig $(CONFIG)
 CSC = mcs
 RUN = mono
 
-all: Out.txt
+all: Out.txt rmaxConvergence.pyxplot.png
 	cat Out.txt
+
+rmaxConvergence.pyxplot.png: rmaxConvergence.txt Makefile
+	echo "\
+	set terminal png \n\
+	set output '$@' \n\
+	set xlabel '$$ rmax $$' \n\
+	set ylabel '$$ energy $$' \n\
+	set title 'rmax convergence' \n\
+	set key right top \n\
+	plot [0:30] [-1:5]\
+	'rmaxConvergence.txt' index 0 using 1:2 with lines title 'E0',\ \n\
+	'rmaxConvergence.txt' index 0 using 1:3 with lines title 'E1',\ \n\
+	'rmaxConvergence.txt' index 0 using 1:4 with lines title 'E2',\ \n\
+	-1.0/2 with lines title 'exact E0',\ \n\
+	-1.0/8 with lines title 'exact E1',\ \n\
+	-1.0/18 with lines title 'exact E2' \ \n\
+	" | tee log.gpi | pyxplot
 
 Out.txt: main.exe
 	mono $< > $@
