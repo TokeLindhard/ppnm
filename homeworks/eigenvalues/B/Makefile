@@ -9,7 +9,7 @@ RUN=$(DOTNET) exec --runtimeconfig $(CONFIG)
 CSC = mcs
 RUN = mono
 
-all: Out.txt rmaxConvergence.pyxplot.png
+all: Out.txt rmaxConvergence.pyxplot.png drConvergence.pyxplot.png
 	cat Out.txt
 
 rmaxConvergence.pyxplot.png: rmaxConvergence.txt Makefile
@@ -24,6 +24,23 @@ rmaxConvergence.pyxplot.png: rmaxConvergence.txt Makefile
 	'rmaxConvergence.txt' index 0 using 1:2 with lines title 'E0',\ \n\
 	'rmaxConvergence.txt' index 0 using 1:3 with lines title 'E1',\ \n\
 	'rmaxConvergence.txt' index 0 using 1:4 with lines title 'E2',\ \n\
+	-1.0/2 with lines title 'exact E0',\ \n\
+	-1.0/8 with lines title 'exact E1',\ \n\
+	-1.0/18 with lines title 'exact E2' \ \n\
+	" | tee log.gpi | pyxplot
+
+drConvergence.pyxplot.png: drConvergence.txt Makefile
+	echo "\
+	set terminal png \n\
+	set output '$@' \n\
+	set xlabel '$$ dr $$' \n\
+	set ylabel '$$ energy $$' \n\
+	set title 'dr convergence' \n\
+	set key right top \n\
+	plot [0:10] [-10:0]\
+	'drConvergence.txt' index 0 using 1:2 with lines title 'E0',\ \n\
+	'drConvergence.txt' index 0 using 1:3 with lines title 'E1',\ \n\
+	'drConvergence.txt' index 0 using 1:4 with lines title 'E2',\ \n\
 	-1.0/2 with lines title 'exact E0',\ \n\
 	-1.0/8 with lines title 'exact E1',\ \n\
 	-1.0/18 with lines title 'exact E2' \ \n\
@@ -46,4 +63,4 @@ matrix.dll: \
 	$(CSC) -target:library -out:./$@ $^
 	
 clean:
-	$(RM) *.dll *.exe *.txt
+	$(RM) *.dll *.exe *.txt *.png
