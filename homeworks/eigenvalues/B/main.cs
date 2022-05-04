@@ -1,9 +1,10 @@
 using System;
 using static System.Console;
 using System.IO;
+using static System.Math;
 
 class main{
-    static double rmax = 10; //max integration value
+    static double rmax = 35; //max integration value
     static int N = 100; //number of points in grid
     static double dr = rmax/(N+1); //stepsize
     static vector r = new vector(N);
@@ -16,6 +17,7 @@ class main{
         //V.print();
         rmaxConvergence();
         drConvergence();
+        //drConv();
     }
 
     public static matrix makeH(){
@@ -69,35 +71,33 @@ class main{
             }
         }
     }
-
     public static void drConvergence(){
-        WriteLine("As expected dr converges for low dr, but goes far from result for higher dr");
-        using(var outfile = new StreamWriter("drConvergence.txt")){
-            double rmax = 35;
-            for(double varydr=0.1; varydr<6;varydr+=0.1){ //getting the eigenvalues out at different dr values. Going up to a max
-                int N = (int)(rmax/varydr-1);
-                vector r = new vector(N);
-                for(int i=0;i<N;i++){
-                    r[i]=dr*(i+1);
+		WriteLine("For dr convgerence we see they approximate the exact solutions well for small dr");
+        WriteLine();
+        WriteLine("but for larger dr they all go to the same eigenvalue.");
+		using(var outfile = new StreamWriter("drConvergence.txt")){
+			for(double varydr = 0.1; varydr<6;varydr+=0.1){
+				int N = (int) (rmax/varydr-1);
+				vector r = new vector(N);
+				for(int i=0; i<N; i++){
+                    r[i]=varydr*(i+1);
+                }
+				matrix H = new matrix(N,N);
+				for(int i=0;i<N-1;i++){
+					matrix.set(H,i,i,-2);
+					matrix.set(H,i,i+1,1);
+					matrix.set(H,i+1,i,1);
+				}
+				matrix.set(H,N-1,N-1,-2);
+				H*=-0.5/varydr/varydr;
+				for(int i=0;i<N;i++){
+                    H[i,i] += -1/r[i];
                 }
 
-                matrix H = new matrix(N,N);
+				(matrix D, matrix V) = Jacobi.cyclic(H);
 
-                for(int i=0;i<N-1;i++){
-                    matrix.set(H,i,i,-2);
-                    matrix.set(H,i,i+1,1);
-                    matrix.set(H,i+1,i,1);
-                }
-                matrix.set(H,N-1,N-1,-2);
-                H*=-0.5/varydr/varydr;
-
-                for(int i=0;i<N;i++){
-                    H[i,i]+=-1/r[i];
-                }
-                (matrix D, matrix V) = Jacobi.cyclic(H);
-                outfile.WriteLine($"{varydr} {D[0][0]} {D[1][1]} {D[2][2]}"); //D matrix is stupidly huge, but
-                //since the eigenvalues are ordered with the numerically largest first, we focus on the first 3.
-            }
-        }
+				outfile.WriteLine($"{varydr} {D[0,0]} {D[1,1]} {D[2,2]}");
+			}
+		}
     }
 }

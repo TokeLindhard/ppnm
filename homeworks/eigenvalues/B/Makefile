@@ -9,7 +9,7 @@ RUN=$(DOTNET) exec --runtimeconfig $(CONFIG)
 CSC = mcs
 RUN = mono
 
-all: Out.txt rmaxConvergence.pyxplot.png drConvergence.pyxplot.png
+all: Out.txt rmaxConvergence.pyxplot.png drConvergence.pyxplot.png drConv.pyxplot.png
 	cat Out.txt
 
 rmaxConvergence.pyxplot.png: rmaxConvergence.txt Makefile
@@ -37,7 +37,7 @@ drConvergence.pyxplot.png: drConvergence.txt Makefile
 	set ylabel '$$ energy $$' \n\
 	set title 'dr convergence' \n\
 	set key right top \n\
-	plot [0:10] [-10:0]\
+	plot [0:10] [-4:0]\
 	'drConvergence.txt' index 0 using 1:2 with lines title 'E0',\ \n\
 	'drConvergence.txt' index 0 using 1:3 with lines title 'E1',\ \n\
 	'drConvergence.txt' index 0 using 1:4 with lines title 'E2',\ \n\

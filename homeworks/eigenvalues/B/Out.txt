@@ -1,2 +1,4 @@
 As expected for higher rmax-values the result converges
-As expected dr converges for low dr, but goes far from result for higher dr
+For dr convgerence we see they approximate the exact solutions well for small dr
+
+but for larger dr they all go to the same eigenvalue.
