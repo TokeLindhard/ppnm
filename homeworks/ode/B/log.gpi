@@ -1,0 +1,9 @@
+set terminal png 
+set output 'damposc.pyxplot.png' 
+set xlabel '$ t $' 
+set ylabel '$ y $' 
+set title 'damped oscillator' 
+set key right top 
+plot [0:11] [-4:4]'damposc.txt' index 0 using 1:2 with lines title 'theta',\ 
+'damposc.txt' index 0 using 1:3 with lines title 'omega'\ 
+

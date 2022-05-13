@@ -35,18 +35,33 @@ public class ode{
     xs.Add(x);
     ys.Add(y);
     while(steps < max_steps){
+        bool ok =true;
         steps++;
         if(x>=b){break;}    /* job done */
         if(x+h>b){h=b-x;}   /* last step should end at b */
         var (yh,erv) = rkstep12(f,x,y,h);
-        double tol = (acc+yh.norm()*eps) * Sqrt(h/(b-a));
-        double err = erv.norm();
-        if(err<=tol){ 
-            x+=h; y=yh;
+        vector tol = new vector(erv.size);
+        for(int i = 0; i<tol.size; i++){
+            tol[i] = Max(acc, Abs(yh[i]*eps)*Sqrt(h/(b-a)));
+            ok = ok && erv[i]<tol[i];
+        }
+
+        if(ok){ //if we accept the step
+            x+=h;
+            y=yh;
             xs.Add(x);
             ys.Add(y);
-        } // accept step
-        h *= Min( Pow(tol/err,0.25)*0.95 , 2); // readjust stepsize
+        }
+        double factor = tol[0]/Abs(erv[0]);
+        for(int i = 1; i<tol.size; i++){
+            factor = Min(factor, tol[i]/Abs(erv[i]));
+        }
+        h *= Min( Pow(factor,0.25)*0.95 , 2); // readjust stepsize
+        //if(err<=tol){ 
+         //   x+=h; y=yh;
+         //   xs.Add(x);
+         //   ys.Add(y);
+        //} // accept step
     }
     return steps;
     }//driver
