@@ -1,0 +1,10 @@
+set terminal png 
+set output '2ndpoly.pyxplot.png' 
+set xlabel '$ x $' 
+set ylabel '$ y $' 
+set title '2nd degree polynomial and integrated function' 
+set key left top 
+plot [1:10] [0:100]'2ndpoly.txt' index 0 using 1:2 with points pointtype 3 title 'data points',\ 
+'integration.txt' index 0 using 1:2 with lines title 'linear interpolation',\ 
+'integration.txt' index 0 using 1:3 with lines title 'integrated function'\ 
+
