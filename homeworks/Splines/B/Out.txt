@@ -1,0 +1,37 @@
+Test1
+Calculated c's vs. spline c's
+0 0
+0 0
+0 0
+0 0
+Calculated b's vs. spline b's
+0 0
+0 0
+0 0
+0 0
+
+
+Test2
+Calculated c's vs. spline c's
+0 0
+0 0
+0 0
+0 0
+Calculated b's vs. spline b's
+1 1
+1 1
+1 1
+1 1
+
+
+Test3
+Calculated c's vs. spline c's
+1 0
+1 2
+1 0
+1 2
+Calculated b's vs. spline b's
+2 3
+4 3
+6 7
+8 7

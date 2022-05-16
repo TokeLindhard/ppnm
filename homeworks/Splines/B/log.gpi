@@ -1,0 +1,11 @@
+set terminal png 
+set output 'qspline.pyxplot.png' 
+set xlabel '$ x $' 
+set ylabel '$ y $' 
+set title 'Quadratic spline' 
+set key left top 
+plot [1:10] [0:100]'qspline.txt' index 0 using 1:2 with points pointtype 3 title 'data points',\ 
+'qspline.txt' index 1 using 1:2 with lines title 'qspline',\ 
+'qspline.txt' index 1 using 1:3 with lines title 'derivative',\ 
+'qspline.txt' index 1 using 1:4 with lines title 'integral'\ 
+
