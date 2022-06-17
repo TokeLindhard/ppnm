@@ -1,0 +1,4 @@
+integral of sqrt(x) from 0 to 1 is 0.666953909054655, which analytically is 2/3
+integral of 1/sqrt(x) from 0 to 1 is 1.99996150007805, which analytically is 2
+integral of 4*sqrt(1-x^2) from 0 to 1 is 3.14183457802727, which analytically is pi
+integral of Log(x)/sqrt(x) from 0 to 1 is -3.99991705899915, which analytically is -4
