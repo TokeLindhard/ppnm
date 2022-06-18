@@ -5,7 +5,5 @@ set ylabel '$ erf(z) $'
 set title 'Error function' 
 set key left top 
 plot [-4:4] [-2:2]'erf.txt' index 0 using 1:2 with lines title 'Integrated values',\ 
-'erf.txt' index 0 using 1:2 with points title 'Integrated values',\ 
-'erf.txt' index 1 using 1:2 with lines title 'Known values',\ 
-'erf.txt' index 1 using 1:2 with points title 'Known values'\ 
+'erf.txt' index 1 using 1:2 with points title 'Tabulated values'\ 
 

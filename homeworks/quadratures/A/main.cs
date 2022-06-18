@@ -25,7 +25,7 @@ class main{
         Func<double,double> erf = x => 2/(Sqrt(PI))*Exp(-Pow(x,2)); 
 
         using(var outfile = new System.IO.StreamWriter("erf.txt")){
-        for(double z=-3;z<4;z++){
+        for(double z=-3;z<4;z+=1.0/16.0){
             outfile.WriteLine($"{z} {quad.integrate(erf,a,z)}"); //integrating erf(z) at several z values.
         }
         outfile.WriteLine();

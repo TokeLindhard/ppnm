@@ -22,9 +22,7 @@ erf.pyxplot.png: erf.txt Makefile
 	set key left top \n\
 	plot [-4:4] [-2:2]\
 	'erf.txt' index 0 using 1:2 with lines title 'Integrated values',\ \n\
-	'erf.txt' index 0 using 1:2 with points title 'Integrated values',\ \n\
-	'erf.txt' index 1 using 1:2 with lines title 'Known values',\ \n\
-	'erf.txt' index 1 using 1:2 with points title 'Known values'\ \n\
+	'erf.txt' index 1 using 1:2 with points title 'Tabulated values'\ \n\
 	" | tee log.gpi | pyxplot
 
 Out.txt: main.exe
