@@ -1,0 +1,6 @@
+Without transforming 1/sqrt(x) yields 1.99999999894916 using 123900 calls
+Without transforming log(x)/sqrt(x) yields -3.99999999941305 using 302996 calls
+With the transformation 1/sqrt(x) yields 1.99999201046432 using 16 calls
+With the transformation log(x)/sqrt(x) yields -3.99987385646141 using 96 calls
+Python integrating 1/sqrt(x) yields 1.9999999999999993 after 231 calls
+Python integrating log(x)/sqrt(x) yields -3.9999999999999827 after 315 calls
