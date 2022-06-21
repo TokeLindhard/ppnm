@@ -1,8 +1,12 @@
-EXAM PROJECT 18 -- ADAPTIVE INTEGRATION OF COMPLEX-VALUED FUNCTIONS
-Lord Toke Marstrand Pontoppidan Lindhard.
-My studynumber is 201906464, and 64%23=18, so I am doing the "Adaptive integration of complex-valued functions" exam.
 ------------------------------------------------------------------------------------------------------------------------
-In this project, I have taken the adaptive recursive integrator from the homework 'quadratures' and generalized it to work for complex functions and complex limits as well. The integrator is tested on a few simple functions first to assure it is working correctly. Then, to test if we can reduce the amount of times the integration procedure is called, the Clenshaw-Curtis variable transformation is implemented. Both for the limits [-1,1] and the generalized [a,b]. Both implementations are tested against the same functions as before. Lastly the first kind Bessel function in cosine representation is calculated for n=0,...,4 using the expression from Wikipedia: https://en.wikipedia.org/wiki/Bessel_function. To ullustrate this is working correctly they are plotted and compared to the corresponding figure from Wikipedia. It can be seen that they express the same behaviour as the plot on Wikipedia. 
+                                                PROJECT INFORMATION
+------------------------------------------------------------------------------------------------------------------------
+EXAM PROJECT 18 -- ADAPTIVE INTEGRATION OF COMPLEX-VALUED FUNCTIONS
+Toke Marstrand Pontoppidan Lindhard.
+My studynumber is 201906464, and 64%23=18, so I am doing the "Adaptive integration of complex-valued functions" exam.
+
+In this project, I have taken the adaptive recursive integrator from the homework 'quadratures' and generalized it to
+work for complex functions and complex limits as well. The integrator is tested on a few simple functions first to assure it is working correctly. Then, to test if we can reduce the amount of times the integration procedure is called, the Clenshaw-Curtis variable transformation is implemented. Both for the limits [-1,1] and the generalized [a,b]. Both implementations are tested against the same functions as before. Lastly the first kind Bessel function in cosine representation is calculated for n=0,...,4 using the expression from Wikipedia: https://en.wikipedia.org/wiki/Bessel_function. To ullustrate this is working correctly they are plotted and compared to the corresponding figure from Wikipedia. It can be seen that they express the same behaviour as the plot on Wikipedia. 
 
 ------------------------------------------------------------------------------------------------------------------------
                                                 FILE STRUCTURE

@@ -6,7 +6,7 @@ class main{
     public static int ncalls = 0; //tracking how many calls, i.e. iterations, the adapter is using.
     public static void Main(){
         WriteLine("           EXAM PROJECT 18 - ADAPTIVE INTEGRATION OF COMPLEX-VALUED FUNCTIONS");
-        WriteLine("                   Lord Toke Marstrand Pontoppidan Lindhard");
+        WriteLine("                   Toke Marstrand Pontoppidan Lindhard");
         WriteLine("                             Study number: 201906464");
         WriteLine("--------------------------------------------------------------------------------------------------");
         WriteLine();
