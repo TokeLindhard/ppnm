@@ -1,8 +1,28 @@
+           EXAM PROJECT 18 - ADAPTIVE INTEGRATION OF COMPLEX-VALUED FUNCTIONS
+                   Lord Toke Marstrand Pontoppidan Lindhard
+                             Study number: 201906464
+--------------------------------------------------------------------------------------------------
+
+First we will test the integrator using simple functions.
+While doing these, we keep track of the amount of iterations each integral takes.
 Integral of 1/sqrt(x) from 0 to 1 is 2+0i and analytically is 2. This took 123900 iterations
-integral of log(x)/sqrt(x) from 3+2i to 10+5i is 5.24+2.31i and analytically a big expression which rounded off yields 5.24+2.31i
+Integral of log(x)/sqrt(x) from 3+2i to 10+5i is 5.24+2.31i and analytically a big expression which rounded off yields 5.24+2.31i
 This took 264 iterations.
-Finding J0 took 2777404 iterations.
+Integral of 4sqrt(1-x^2) from -1 to 1 is 6.28+3.84e-16i. This took 1272 iterations.
+--------------------------------------------------------------------------------------------------
+Now we can compare the amount of iterations used, when we use the Clenshaw-Curtis variable transformation
+We both use the implementation for the limits [-1,1], but also the general [a,b].
+Using the CC transformation, the integral of 1/sqrt(x) from 0 to 1 is 2+0i, which took 352 iterations, a lot less than before.
+Using the CC transformation, the integral of log(x)/sqrt(x) from 3+2i to 10+5i is 5.24+2.31i, which took 916 iterations, which is more than before.
+Using the CC transformation, the integral of 4*sqrt(1-x^2) from -1 to 1 is 6.28+3.85e-16i, which took 924 iterations, which is slighty less than before.
+As can be seen, the CC transformation is much faster in some cases, but also slower in specific cases.
+Lastly, we wish to test this on the Bessel function J_n(x) of first kind.
+--------------------------------------------------------------------------------------------------
+We calculate the Bessel function of first kind using the cosine integral representation from Wikipedia
+The first five (n=0,1,2,3,4) functions are calculated.
+Finding J0 took 2778328 iterations.
 Finding J1 took 2784824 iterations.
 Finding J2 took 2797988 iterations.
 Finding J3 took 2817276 iterations.
 Finding J4 took 2842972 iterations.
+The results can be seen in the figure Bessel.pyxplot.png

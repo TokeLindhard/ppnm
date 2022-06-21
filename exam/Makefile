@@ -9,21 +9,27 @@ RUN=$(DOTNET) exec --runtimeconfig $(CONFIG)
 CSC = mcs
 RUN = mono
 
-all: Out.txt Besselcos.pyxplot.png
+all: Out.txt Bessel.pyxplot.png
 	cat Out.txt
 
 Out.txt: main.exe
 	mono $< > $@
 
-Besselcos.pyxplot.png: J0cos.txt J1cos.txt J2cos.txt Makefile
+Bessel.pyxplot.png: J0cos.txt J1cos.txt J2cos.txt Makefile
 	echo "\
 	set terminal png \n\
 	set output '$@' \n\
 	set xlabel '$$ x $$' \n\
 	set ylabel '$$ J_n(x) $$' \n\
+	set xtics out \n\
+	set ytics out \n\
+	set xtics 10 \n\
+	set ytics -1, 0.2, 1.2 \n\
+	set mxtics 5 \n\
+	set mytics 0.1 \n\
 	set grid \n\
 	set title 'Bessel function of first kind for integer orders n=0,1,2,3,4' \n\
-	set key right top \n\
+	set key out \n\
 	plot [0:51] [-0.5:1.2]\
 	'J0cos.txt' index 0 using 1:2 with lines title 'J0',\ \n\
 	'J1cos.txt' index 0 using 1:2 with lines title 'J1',\ \n\
