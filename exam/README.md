@@ -1,8 +1,8 @@
 ------------------------------------------------------------------------------------------------------------------------
                                                 PROJECT INFORMATION
 ------------------------------------------------------------------------------------------------------------------------
-EXAM PROJECT 18 -- ADAPTIVE INTEGRATION OF COMPLEX-VALUED FUNCTIONS
-Toke Marstrand Pontoppidan Lindhard.
+EXAM PROJECT 18 -- ADAPTIVE INTEGRATION OF COMPLEX-VALUED FUNCTIONS \\
+Toke Marstrand Pontoppidan Lindhard \\
 My studynumber is 201906464, and 64%23=18, so I am doing the "Adaptive integration of complex-valued functions" exam.
 
 In this project, I have taken the adaptive recursive integrator from the homework 'quadratures' and generalized it to
