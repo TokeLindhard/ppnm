@@ -1,0 +1,13 @@
+set terminal png 
+set output 'Besselcos.pyxplot.png' 
+set xlabel '$ x $' 
+set ylabel '$ J_n(x) $' 
+set grid 
+set title 'Bessel function of first kind for integer orders n=0,1,2,3,4' 
+set key right top 
+plot [0:51] [-0.5:1.2]'J0cos.txt' index 0 using 1:2 with lines title 'J0',\ 
+'J1cos.txt' index 0 using 1:2 with lines title 'J1',\ 
+'J2cos.txt' index 0 using 1:2 with lines title 'J2',\ 
+'J3cos.txt' index 0 using 1:2 with lines title 'J3',\ 
+'J4cos.txt' index 0 using 1:2 with lines title 'J4'\ 
+

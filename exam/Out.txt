@@ -1,0 +1,8 @@
+Integral of 1/sqrt(x) from 0 to 1 is 2+0i and analytically is 2. This took 123900 iterations
+integral of log(x)/sqrt(x) from 3+2i to 10+5i is 5.24+2.31i and analytically a big expression which rounded off yields 5.24+2.31i
+This took 264 iterations.
+Finding J0 took 2777404 iterations.
+Finding J1 took 2784824 iterations.
+Finding J2 took 2797988 iterations.
+Finding J3 took 2817276 iterations.
+Finding J4 took 2842972 iterations.
