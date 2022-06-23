@@ -44,3 +44,6 @@ all: main.exe
 
 %.exe: %.cs
 	mcs $< > $@
+
+clean:
+	$(RM) *.dll *.exe *.png *.gpi

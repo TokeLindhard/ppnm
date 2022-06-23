@@ -1,0 +1,27 @@
+We test the implementation of Monte-Carlo by a few simple two-dimensional integrals
+We calculate both using plain MC, but also using quasi-random sampling and mark the differences.
+All runs are done with N=100000
+
+First, the integral of x*y with lower limits [5,7] and upper limits [10,12]
+The integral yields 1781.06426005616 with error 1.39437584832435
+With quasi-random sampling the integral is 1781.19504390726 with error 0.415145461795774
+The analytical result is 7125/4=1781.25
+
+Next, we test the integral of x^2+y^2 with lower limits [5,3] and upper limits [10,7]
+The integral yields 1694.27984179841 with error 1.55904840277641
+With quasi-random sampling the integral is 1693.27726227495 with error 0.425829226708458
+The analytical result is 5080/3=1693.33....
+
+Lastly, we test the integral of x^2+y^2 with lower limits [5,3] and upper limits [10,7]
+The integral yields -1.97497173933201 with error 0.0116967660398415
+With quasi-random sampling the integral is -Infinity with error NaN
+The analytical result is -2
+
+Now we are ready to test the 3D-integral of 1/pi^3*int dx*int dy*int dz [1-cos(x)cos(y)cos(z)]^-1
+With limits xlim=ylim=zlim=[0,pi]
+The integral yields 1.35550547169135 with error 0.0105631712744158
+With quasi-random sampling the integral is Infinity with error NaN
+The analytical result is Gamma(1/4)^4/(4pi)^3=1.3932...
+
+We see that generally, using the quasi-random sampling, the error is reduced.
+However, it seems that sometimes the integrals will diverge instead, giving an NaN-error.
