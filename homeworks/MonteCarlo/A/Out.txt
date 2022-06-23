@@ -1,13 +1,19 @@
 We test the implementation of Monte-Carlo by a few simple two-dimensional integrals
 All integrals are done with N=100000
 
-First, the integral of x*y with lower limits [5,7] and upper limits [10,12]The integral yields 1779.69421734597 with error 1.38953527365676
+First, the integral of x*y with lower limits [5,7] and upper limits [10,12]The integral yields 1781.45568770571 with error 1.39334929448174
 The analytical result is 7125/4=1781.25
 
 Next, we test the integral of x^2+y^2 with lower limits [5,3] and upper limits [10,7]
-The integral yields 1693.95268471555 with error 1.56153308921047
+The integral yields 1693.356920749 with error 1.55681703630625
 The analytical result is 5080/3=1693.33....
 
 Lastly, we test the integral of x^2+y^2 with lower limits [5,3] and upper limits [10,7]
-The integral yields -1.99991104675297 with error 0.0137669320561607
+The integral yields -1.98527196717445 with error 0.0135161094184757
 The analytical result is -2
+
+
+Now we are ready to test the 3D-integral of 1/pi^3*int dx*int dy*int dz [1-cos(x)cos(y)cos(z)]^-1
+With limits xlim=ylim=zlim=[0,pi]
+The integral yields 1.38680325045847 with error 0.0132271066236043
+The analytical result is Gamma(1/4)^4/(4pi)^3=1.3932...
