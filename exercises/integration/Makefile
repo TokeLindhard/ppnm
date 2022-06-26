@@ -20,3 +20,6 @@ main.exe: main.cs matlib.dll
 
 matlib.dll: integrate.cs
 	mcs -target:library -out:$@ $<
+
+clean:
+	$(RM) *.dll *.exe *.txt *.png *.gpi

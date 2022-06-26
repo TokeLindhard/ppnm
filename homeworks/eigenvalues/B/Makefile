@@ -9,7 +9,7 @@ RUN=$(DOTNET) exec --runtimeconfig $(CONFIG)
 CSC = mcs
 RUN = mono
 
-all: Out.txt rmaxConvergence.pyxplot.png drConvergence.pyxplot.png drConv.pyxplot.png
+all: Out.txt rmaxConvergence.pyxplot.png drConvergence.pyxplot.png
 	cat Out.txt
 
 rmaxConvergence.pyxplot.png: rmaxConvergence.txt Makefile

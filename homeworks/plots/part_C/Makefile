@@ -26,4 +26,4 @@ cmath.dll: $(CMATHDIR)/cmath.cs $(CMATHDIR)/complex.cs
 	mcs -target:library -out:./cmath.dll $^ # note "./" in front of cmath.dll
 
 clean:
-	$(RM) *.dll *.exe *.png *.gpi
+	$(RM) *.dll *.exe *.png *.gpi *.data.txt

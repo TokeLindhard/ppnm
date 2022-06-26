@@ -46,4 +46,4 @@ all: main.exe
 	mcs $< > $@
 
 clean:
-	$(RM) *.dll *.exe *.png *.gpi
+	$(RM) *.dll *.exe *.png *.gpi *.data.txt

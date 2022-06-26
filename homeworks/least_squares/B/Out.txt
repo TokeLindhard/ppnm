@@ -8,6 +8,7 @@ Covariance matrix:
 
 errors
     0.0318    0.00425 
+
 The half life is 4.04828189712487 ± 0.100412737658525
 Compared with a modern value of 3.6 days.
 So it is not enough to come within the modern value.

@@ -1,10 +1,11 @@
            EXAM PROJECT 18 - ADAPTIVE INTEGRATION OF COMPLEX-VALUED FUNCTIONS
-                   Lord Toke Marstrand Pontoppidan Lindhard
+                   Toke Marstrand Pontoppidan Lindhard
                              Study number: 201906464
 --------------------------------------------------------------------------------------------------
 
 First we will test the integrator using simple functions.
 While doing these, we keep track of the amount of iterations each integral takes.
+All integrations are done with absolute and relative accuracy goal of 1e-6.
 Integral of 1/sqrt(x) from 0 to 1 is 2+0i and analytically is 2. This took 123900 iterations
 Integral of log(x)/sqrt(x) from 3+2i to 10+5i is 5.24+2.31i and analytically a big expression which rounded off yields 5.24+2.31i
 This took 264 iterations.

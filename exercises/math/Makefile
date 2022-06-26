@@ -4,3 +4,5 @@ Out.txt: main.exe
 main.exe: main.cs
 	mcs main.cs
 
+clean:
+	$(RM) *.dll *.exe *.txt

@@ -6,3 +6,6 @@ Out.txt: cmdline.exe
 
 cmdline.exe: cmdline.cs
 	mcs -target:exe -out:$@ $<
+
+clean:
+	$(RM) *.dll *.exe *.txt

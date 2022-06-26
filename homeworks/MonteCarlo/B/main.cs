@@ -55,5 +55,6 @@ class main{
         WriteLine();
         WriteLine("We see that generally, using the quasi-random sampling, the error is reduced.");
         WriteLine("However, it seems that sometimes the integrals will diverge instead, giving an NaN-error.");
+        WriteLine("I believe this is due to the error estimation, but I am not certain.");
     }
 }

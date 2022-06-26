@@ -9,3 +9,6 @@ main.exe: main.cs math.dll
 
 math.dll: math.cs
 	mcs -target:library -out:math.dll math.cs
+
+clean:
+	$(RM) *.dll *.exe *.txt *.vimrc

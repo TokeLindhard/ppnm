@@ -7,3 +7,6 @@ Out.txt: stdin.exe
 stdin.exe: stdin.cs
 	mcs -target:exe -out:$@ $<
 
+clean:
+	$(RM) *.dll *.exe *.txt
+

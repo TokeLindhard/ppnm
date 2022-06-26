@@ -60,5 +60,5 @@
 15.75 9.53738116278908
 
 
-The half life is 5.84043621710261 days
+The half life is 4.04828189712487 days
 Compared with a modern value of 3.6 days.

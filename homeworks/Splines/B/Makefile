@@ -36,4 +36,4 @@ qspline.pyxplot.png: qspline.txt Makefile
 	" | tee log.gpi | pyxplot
 
 clean:
-	$(RM) *.dll *.exe *.txt *.png [Oo]ut*
+	$(RM) *.dll *.exe *.txt *.png [Oo]ut* *.gpi

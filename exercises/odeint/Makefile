@@ -10,6 +10,7 @@ CSC = mcs
 RUN = mono
 
 all: Fig.oscillator.png
+
 Fig.oscillator.png: fig.oscillator.gpi oscillator.data.txt
 	pyxplot $<
 

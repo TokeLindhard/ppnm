@@ -8,7 +8,7 @@ RUN=$(DOTNET) exec --runtimeconfig $(CONFIG)
 CSC = mcs
 RUN = mono
 
-all: Out.txt 2ndpoly.pyxplot.png integration.pyxplot.png
+all: Out.txt 2ndpoly.pyxplot.png
 	cat Out.txt
 
 Out.txt: main.exe
@@ -36,4 +36,4 @@ interpolation.dll: interpolation.cs
 
 
 clean:
-	$(RM) *.dll *.exe *.txt *.png [Oo]ut*
+	$(RM) *.dll *.exe *.txt *.png [Oo]ut* *.gpi

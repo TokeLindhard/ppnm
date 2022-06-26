@@ -29,3 +29,6 @@ main.exe: main.cs sfuns.dll
 
 %.dll: %.cs 
 	$(CSC) -t:library $(addprefix -r:,$(filter %.dll,$^)) $(filter %.cs,$^)
+
+clean:
+	$(RM) *.dll *.exe out.exp.txt *.aux *.log ms.pdf

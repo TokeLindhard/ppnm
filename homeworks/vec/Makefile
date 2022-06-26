@@ -9,3 +9,6 @@ main.exe: main.cs vec.dll
 
 vec.dll:vec.cs
 	mcs -target:library -out:vec.dll vec.cs
+
+clean:
+	$(RM) *.dll *.exe *.txt *.png

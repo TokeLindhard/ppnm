@@ -27,7 +27,7 @@ half_life.pyxplot.png: tabdata.txt Out.txt Makefile
 	'tabdata.txt' using 1:2:3 with pointtype 7 yerrorbars title '1902 data' \n\
 	" | tee log.gpi | pyxplot
 
-main.exe: main.cs lsfit.dll matlib.dll QRGS.dll
+main.exe: main.cs lsfit.dll matrix.dll QRGS.dll
 	$(CSC) -target:exe -reference:lsfit.dll -reference:matrix.dll -reference:QRGS.dll $<
 
 lsfit.dll: lsfit.cs matrix.dll QRGS.dll
@@ -44,4 +44,4 @@ matrix.dll: \
 	$(CSC) -target:library -out:./$@ $^
 	
 clean:
-	$(RM) *.dll *.exe *.txt log*
+	$(RM) *.dll *.exe log* *.png [Oo]ut*

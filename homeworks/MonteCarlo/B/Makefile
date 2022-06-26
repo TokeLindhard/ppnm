@@ -29,4 +29,4 @@ matrix.dll: \
 	$(CSC) -target:library -out:./$@ $^
 	
 clean:
-	$(RM) *.dll *.exe *.txt *.png *.gpi
+	$(RM) *.dll *.exe *.txt
