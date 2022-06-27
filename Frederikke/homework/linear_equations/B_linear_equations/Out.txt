@@ -1,0 +1,68 @@
+This is matrix A:
+
+         1         10          0         14 
+         2         10         11          3 
+         1          1          4         11 
+         4         12         11          3 
+        14          8         12          6 
+         7          5          3          0 
+Q is given as
+
+    0.0612      0.588     -0.683      0.376 
+     0.122      0.533      0.481     -0.122 
+    0.0612    0.00986      0.326      0.822 
+     0.245      0.553      0.247     -0.261 
+     0.857     -0.247      0.067      0.147 
+     0.428    -0.0594     -0.362     -0.282 
+R is given as
+
+      16.3       13.8       15.9       7.77 
+         0       15.6       8.84       10.1 
+         0          0       9.03      -3.39 
+         0          0          0         14 
+Performing a check to see if R is upper triangular
+True
+True
+True
+True
+True
+True
+the transpose of Q is: 
+
+    0.0612      0.122     0.0612      0.245      0.857      0.428 
+     0.588      0.533    0.00986      0.553     -0.247    -0.0594 
+    -0.683      0.481      0.326      0.247      0.067     -0.362 
+     0.376     -0.122      0.822     -0.261      0.147     -0.282 
+Q^T*Q is approximately I: True
+Q*R is approximately A: True
+
+Test of the solution to Ax=b
+The new matrix A is calculated as:
+
+         1          8         12          0 
+         4          2         10          6 
+         2          6         11          4 
+         6         12         14          4 
+The new vector b is calculated as:
+         7          2          9          3 
+I will check if Ax=b. This should be equal to b :
+         7          2          9          3 
+It is correct!
+Now I will find the inverse matrix of A
+Here is the inverse matrix A:
+
+         8          0          2          2         11          1 
+         0         14          2         13          8          7 
+        12          4          9         14          3         14 
+        12         13          2          8          8         12 
+         6          6         11         14          8          8 
+         9          0          7          7          2          0 
+This is the inverse matrix B of matrix A:
+
+    0.0119   -0.00535      0.013      0.035     -0.072     0.0846 
+    -0.086    -0.0266     -0.113      0.108     0.0701     0.0367 
+   -0.0903     -0.143     -0.129      0.085      0.234    -0.0172 
+    0.0495      0.147      0.116     -0.124     -0.152     0.0682 
+    0.0893    0.00711    -0.0127    -0.0195     0.0341    -0.0592 
+    0.0038    -0.0451     0.0623     0.0131     0.0352     -0.127 
+A*B is approximately equal to the identity matrix I: True

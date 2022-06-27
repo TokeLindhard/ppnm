@@ -1,0 +1,12 @@
+\
+set term png;\
+set out "errfunc.png";\
+set title "Integral of Error Function";\
+set xlabel  ;\
+set ylabel  ;\
+set key out;\
+set x range [-3:4];\
+plot \
+"errfunc.txt" index 0 using 1:2 with lines title "Error Function Integral Representation",\
+"errfunc.tab.txt" index 0 using 1:2 with points title "Tabulated values"\
+

@@ -1,0 +1,21 @@
+__________I will test the procedure on integrals with known solutions_____________________
+___________________I will calculate the integral x^2 + y^2. Here, I will use the limits [0, 10] for x and [3,8] for y._________________
+By using the plain integration the result gives 3283.77834101025 with uncertainty 1.69196569371362
+By using quasi random sequences the result gives 3283.31407380806 with uncertainty 0.153975444050758
+
+The correct answer is: 3283
+
+The errors in the quasi random sequences are smaller, and the result more accurate
+________________I will calculate the integral x/y^2. For x I will use the limits [0,39], and for y I will use [42,69]._____________
+By using plain integration the resultat gives 7.09192663759459 with uncertainty 0.00472903284690158
+When using quasi random sequences the resultatet becomes 7.08539990549452 with uncertainty 0.000200150690760533
+
+The correct answer is: 7
+
+Once again the error for the quasi random sequence is smaller
+_____________ Calculating ∫0π  dx/π ∫0π  dy/π ∫0π  dz/π [1-cos(x)cos(y)cos(z)]-1_______________ 
+The resultat gives 1.38542708625837 when plain integration is used. The uncertainty is 0.00224234407287767
+When quasi random sequences is used the resultat is Infinity with uncertainty NaN
+
+The correct answer is: 1.39
+Here, the integral divergives for the quasi random sequence, and the uncertainty gives NaN.

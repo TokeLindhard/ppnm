@@ -1,0 +1,5 @@
+_______________The implementation is testing on different integrals_________________
+Integral of sqrt(x) from 0 to 1 is given as 0.666953909054655, which analytically gives 2/3
+Integral of 1/sqrt(x) from 0 to 1 is given as 1.99996150007805, which analytically gives 2
+Integral of 4*sqrt(1-x^2) from 0 to 1 is given as 3.14168489828595, which analytically gives pi
+Integral of ln(x)/sqrt(x) from 0 to 1 is given as -3.9999521745773, which analytically gies -4

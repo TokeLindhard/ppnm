@@ -1,0 +1,10 @@
+Jeg vil teste min fremgangsmetode på integraler med kendte løsninger:
+Jeg regner integralet x^2 + y^2. For a vil jeg bruge grænserne [0, 10], og for y vil jeg bruge [3,8].
+Resultatet giver 3283.59335523814 med usikkerhed 1.6913977389547
+Det rigtige svar er: 3283
+Jeg regner integralet x/y^2. For at a vil jeg bruge grænserne [0,39], og for y vil jeg bruge [42,69].
+Resultatet giver 7.077322929192 med usikkerhed 0.00472269069359433
+Det rigtige svar er: 7
+ ----------Jeg løser opgaven---------- 
+ Resultatet giver 1.38075939585414 med usikkerhed 0.00730928550444774
+Det rigtige svar er: 1.39

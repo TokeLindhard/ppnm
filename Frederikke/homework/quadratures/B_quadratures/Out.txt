@@ -1,0 +1,14 @@
+___________The implementation is testing on different integrals___________
+
+
+_____________Calculations without the transformation:_____________
+Integral of 1/sqrt(x) gives: 1.99999999923004. The number of evaluations: 132436.
+Integral of ln(x)/sqrt(x) is given as: -3.99999999956196. The number of evaluations is: 309440. 
+
+
+____________Calculating with the transoformation________________
+Integral of 1/sqrt(x) gives: 1.99999730808565 by using 24 calls.
+Integral of ln(x)/sqrt(x) gives: -3.9999234350396 by using 108 calls.
+Preforming the same integrals in python yields
+1/sqrt(x) gives: 1.9999999999999993 after 231 calls
+log(x)/sqrt(x) gives -3.9999999999999827 after 315 calls
